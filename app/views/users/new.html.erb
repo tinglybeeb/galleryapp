@@ -1,0 +1,14 @@
+<h1>Sign up</h1>
+
+<% if @user.errors.any? %>
+  <h2>
+    The following errors prevented the user from getting created.  
+  </h2>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render 'signup_form' %>
